@@ -252,7 +252,7 @@ class YieldPredictionModel(BaseModel):
         )
         
         # Climate features
-        yield_features['growing_season_rainfall'] = data['growing_season_rainfall']
+        yield_features['growing_season_rainfall'] = data['rainfall_growing_season']
         yield_features['temperature_optimality'] = self._calculate_temperature_optimality(data)
         yield_features['water_stress_index'] = self._calculate_water_stress(data)
         
@@ -473,7 +473,7 @@ def create_sample_data() -> Tuple[pd.DataFrame, Dict[str, pd.Series]]:
         'crop_water_requirement': np.random.normal(800, 150, n_samples),
         
         # Additional features
-        'growing_season_rainfall': np.random.gamma(2, 300, n_samples),
+        'rainfall_growing_season': np.random.gamma(2, 300, n_samples),
         'field_drainage': np.random.choice(['poor', 'moderate', 'good'], n_samples),
         'optimal_rainfall': np.random.normal(1000, 200, n_samples),
     })

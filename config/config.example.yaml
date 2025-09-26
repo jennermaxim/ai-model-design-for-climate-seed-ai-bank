@@ -1,5 +1,4 @@
 # Climate-Adaptive Seed AI Bank Configuration
-# Copy this file to config.yaml and update with your settings
 
 # Database Configuration
 database:

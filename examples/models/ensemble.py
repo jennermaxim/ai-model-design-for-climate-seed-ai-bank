@@ -470,6 +470,7 @@ def create_sample_farm_data() -> FarmData:
             'rainfall_annual': 1300,
             'rainfall_dry_season': 150,
             'rainfall_wet_season': 850,
+            'rainfall_growing_season': 650,
             'rainfall_std': 180,
             'humidity_avg': 75,
             'evapotranspiration': 1400
